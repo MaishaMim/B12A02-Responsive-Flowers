@@ -61,6 +61,7 @@
       color: #333;
       font-size: 16px;
       transition: color 0.3s ease;
+      font-family: "Inter", sans-serif;
     }
 
     .nav-links a.active {
@@ -275,8 +276,9 @@
 }
 
 .latest-deals h2 {
-  font-size: 32px;
+  font-size: 50px;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .latest-deals .highlight {
@@ -285,10 +287,11 @@
 
 .latest-deals .subtitle {
   color: #555;
-  max-width: 600px;
+  max-width: 888px;
   margin: 0 auto 40px;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 1.6;
+  font-family: "Inter", sans-serif;
 }
 
 .deals-grid {
@@ -341,10 +344,14 @@
 }
 
 .deal-text h3, .deal-text h2 {
-  font-size: 20px;
+  font-size: 40px;
   margin-bottom: 10px;
   color: #fff;
   font-weight: bold;
+}
+
+.deal-text h3 {
+    font-size: 20px;
 }
 
 .deal-text.center {
@@ -356,12 +363,16 @@
 .deal-text a {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #f56a0b;
   color: white;
-  text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+}
+
+.deal-text a.right {
+    font-weight: 600;
+    font-size: 28px;
 }
 
 .deal-text a:hover {
@@ -372,9 +383,11 @@
 .join-section {
   position: relative;
   text-align: center;
-  padding: 100px 20px;
+  padding: 200px 20px;
   color: white;
   overflow: hidden;
+  font-size: 50px;
+  font-weight: bold;
 }
 
 .join-section .background-image {
@@ -394,6 +407,8 @@
 
 .subscribe-form {
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .subscribe-form input,
@@ -402,23 +417,22 @@
   border: none;
   outline: none;
   font-size: 16px;
-  margin: 5px;
 }
 
 .subscribe-form input {
-  width: 250px;
+  width: 586px;
   max-width: 80%;
 }
 
 .subscribe-form button {
-  background-color: #ff4081;
+  background-color: #f56a0b;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .subscribe-form button:hover {
-  background-color: #e73370;
+  background-color:#d65400;
 }
 
 
@@ -438,7 +452,7 @@
 
 .footer-logo {
   flex: 1;
-  min-width: 250px;
+  max-width: 359px;
 }
 
 .footer-logo img {
@@ -447,9 +461,10 @@
 }
 
 .footer-logo p {
-  font-size: 14px;
-  color: #555;
+  font-size: 22px;
+  color: #9d9d9d;
   max-width: 300px;
+  font-family: "Inter", sans-serif;
 }
 
 .footer-links {
@@ -462,6 +477,7 @@
 
 .footer-links ul {
   list-style: none;
+  font-family: "Inter", sans-serif;
 }
 
 .footer-links li {
@@ -506,11 +522,14 @@
   }
 
   .hero-content {
-    align-items: center;
+    align-items: left;
+
+
   }
 
   .hero-content h1 {
     font-size: 28px;
+    text-align: left;
   }
 
   .hero-content p {
@@ -572,25 +591,33 @@
   }
 
   .latest-deals h2 {
-    font-size: 22px;
+    font-size: 24px;
   }
 
   .deals-grid {
+    display: flex;
     flex-direction: column;
     gap: 20px;
   }
 
   .deal-left {
     flex-direction: column;
-    gap: 20px;
   }
 
   .deal-card {
-    height: 180px;
+    width: 100%;
+  }
+   .deal-card.large {
+    height: 180px; /* ensure it’s visible */
   }
 
-  .deal-text h3,
-  .deal-text h2 {
+   .deal-text {
+    padding: 16px;
+    text-align: center;
+  }
+
+  .deal-text h2,
+  .deal-text h3 {
     font-size: 16px;
   }
 
@@ -601,23 +628,27 @@
 
   /* Join */
   .join-section {
-    padding: 60px 16px;
-  }
-
-  .join-section h2 {
+  background-size: cover;
+  background-position: center;
+  padding:60px 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+ .join-section h2 {
     font-size: 1.5rem;
   }
 
-  .subscribe-form {
-    flex-direction: column;
-    align-items: center;
-  }
+.subscribe-form {
+  flex-direction: row;
+  width: 100%;
+}
 
-  .subscribe-form input,
-  .subscribe-form button {
-    width: 100%;
-    font-size: 14px;
-  }
+.subscribe-form input,
+.subscribe-form button {
+    display: flex;
+  width: 100%;
+  font-size: 14px;
+}
 
   /* Footer */
   .footer {
@@ -626,29 +657,57 @@
 
   .footer-content {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
     gap: 30px;
+    width: 100%;
   }
 
+  .footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* logo + p align left */
+  gap: 10px;
+  width: 100%;
+}
+
+.footer-logo img {
+  max-width: 150px; /* adjust size if needed */
+  height: auto;
+}
+
+.footer-logo p {
+  font-size: 16px;
+  color: #666;
+  max-width: 100%;
+}
   .footer-links {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
 
-  .footer-links ul {
-    padding: 0;
-  }
+.footer-links ul {
+  padding: 0;
+  text-align: left;
+}
 
-  .footer-socials {
-    gap: 10px;
-  }
+.footer-socials {
+  justify-content: flex-start; /* align icons to the left */
+  width: 100%;                 /* take up full row */
+  padding-left: 0;             /* reset any centering */
+}
 
-  .footer-socials a img {
-    width: 24px;
-    height: 24px;
-  }
+.footer-socials a {
+  display: inline-block;
+}
+
+.footer-socials a img {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
 }
 
 /* 🔸 Medium Devices (Tablets) - 576px to 992px */
