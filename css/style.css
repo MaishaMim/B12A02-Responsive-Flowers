@@ -1,23 +1,17 @@
 .noto-serif-normal {
   font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
-  /* font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100; */
+  
 }
 .inter-normal {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  /* font-weight: <weight>;
-  font-style: normal; */
+  
 }
 
 * {
       margin: 0;
       padding: 0;
-      /* box-sizing: border-box;
-      font-family: Arial, sans-serif; */
     }
 
     body {
@@ -72,7 +66,7 @@
       color: #f56a0b;
     }
 
-    /* Cart icon */
+    /* Cart */
     .cart {
       display: flex;
       align-items: center;
@@ -84,10 +78,10 @@
     .cart i {
       font-size: 18px;
     }
-/*  */
+/* hero-banner */
  .hero {
   display: flex;
-  align-items: flex-end; /* Aligns content to the bottom */
+  align-items: flex-end; 
   justify-content: space-between;
   padding: 185px 160px 80px;
   background-color: #f7faff;
@@ -130,7 +124,7 @@
 .hero-image {
   flex: 1;
   display: flex;
-  align-items: center;  /* vertical centering of the image */
+  align-items: center;  
   justify-content: center;
   max-width: 500px;
 }
@@ -142,7 +136,7 @@
   object-fit: cover;
 }
 
-/*  */
+/*plant*/
 
 .plants {
   text-align: center;
@@ -213,7 +207,7 @@
   background-color: #d65400;
 }
 
-/*  */
+/* plant-lover */
 .plants-lover {
   display: flex;
   align-items: center;
@@ -237,8 +231,8 @@
 
 .trusted-badge {
   position: absolute;
-  top: -100px; /* move badge above the image */
-  right: -140px; /* shift badge to the right */
+  top: -100px; 
+  right: -140px; 
   width: 286px;
   animation: spin 4s linear infinite;
 }
@@ -267,7 +261,7 @@
   font-family: "Inter", sans-serif;
 }
 
-/*  */
+/* deals */
 
 .latest-deals {
   text-align: center;
@@ -329,7 +323,7 @@
 }
 
 .deal-text {
-  background: rgba(0, 0, 0, 0.4); /* dark transparent overlay */
+  background: rgba(0, 0, 0, 0.4); 
   position: absolute;
   top: 0;
   left: 0;
@@ -493,7 +487,8 @@
 
 .footer-socials {
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
   gap: 15px;
   font-size: 20px;
 }
@@ -509,12 +504,12 @@
 }
 
 
- /* 🔸 Small Devices (Phones) - up to 576px */
+
 @media screen and (max-width: 576px) {
      .nav-links a:not(.cart) {
-        display: none; /* hide all menu items except cart */
+        display: none; 
       }
-  /* Hero */
+  
   .hero {
     flex-direction: column-reverse;
     text-align: center;
@@ -608,7 +603,7 @@
     width: 100%;
   }
    .deal-card.large {
-    height: 180px; /* ensure it’s visible */
+    height: 180px; 
   }
 
    .deal-text {
@@ -666,13 +661,13 @@
   .footer-logo {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* logo + p align left */
+  align-items: flex-start; 
   gap: 10px;
   width: 100%;
 }
 
 .footer-logo img {
-  max-width: 150px; /* adjust size if needed */
+  max-width: 150px; 
   height: auto;
 }
 
@@ -694,9 +689,9 @@
 }
 
 .footer-socials {
-  justify-content: flex-start; /* align icons to the left */
-  width: 100%;                 /* take up full row */
-  padding-left: 0;             /* reset any centering */
+  justify-content: flex-start; 
+  width: 100%;                 
+  padding-left: 0;             
 }
 
 .footer-socials a {
@@ -710,9 +705,9 @@
 }
 }
 
-/* 🔸 Medium Devices (Tablets) - 576px to 992px */
+
 @media screen and (min-width: 576px) and (max-width: 992px) {
-  /* Hero */
+  
   .hero {
     flex-direction: column-reverse;
     text-align: center;
@@ -738,7 +733,7 @@
     justify-content: center;
   }
 
-  /* Plants */
+ 
   .plants {
     padding: 40px 40px;
   }
@@ -762,7 +757,7 @@
     display: block;
   }
 
-  /* Plants Lover */
+  
   .plants-lover {
     flex-direction: column;
     gap: 30px;
@@ -773,7 +768,7 @@
     display: none;
   }
 
-  /* Deals */
+ 
   .latest-deals {
     padding: 50px 40px;
   }
@@ -797,7 +792,7 @@
     height: 150px;
   }
 
-  /* Join */
+  
   .join-section {
     padding: 80px 40px;
   }
@@ -811,7 +806,7 @@
     width: 100%;
   }
 
-  /* Footer */
+  
   .footer {
     padding: 50px 40px;
   }
