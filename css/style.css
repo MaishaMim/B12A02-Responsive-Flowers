@@ -1,0 +1,136 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f7faff;
+    }
+
+    /* Navbar container */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 80px;
+      background-color: #f7faff;
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #f56a0b;
+      cursor: pointer;
+    }
+
+    .logo img {
+      width: 30px;
+      height: 30px;
+    }
+
+    /* Menu items */
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #f56a0b;
+    }
+
+    /* Cart icon */
+    .cart {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .cart i {
+      font-size: 18px;
+    }
+
+    .hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-color: #f7faff;
+}
+
+.hero-content {
+  flex: 1 1 400px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-content .bold {
+  font-weight: 700;
+  color: #000;
+}
+
+.hero-content .highlight {
+  color: #f56a0b;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 16px;
+  color: #555;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.hero-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .nav-links a:not(.cart) {
+        display: none; /* hide all menu items except cart */
+      }
+
+       .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    margin: 0 auto;
+  }
+
+    }
