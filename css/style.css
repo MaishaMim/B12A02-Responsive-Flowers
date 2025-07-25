@@ -1,8 +1,23 @@
+.noto-serif-normal {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100; */
+}
+.inter-normal {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: <weight>;
+  font-style: normal; */
+}
+
 * {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      /* box-sizing: border-box;
+      font-family: Arial, sans-serif; */
     }
 
     body {
@@ -48,6 +63,10 @@
       transition: color 0.3s ease;
     }
 
+    .nav-links a.active {
+  font-weight: bold;
+}
+
     .nav-links a:hover {
       color: #f56a0b;
     }
@@ -65,23 +84,28 @@
       font-size: 18px;
     }
 /*  */
-    .hero {
+ .hero {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 160px;
-  flex-wrap: wrap;
+  align-items: flex-end; /* Aligns content to the bottom */
+  justify-content: space-between;
+  padding: 185px 160px 80px;
   background-color: #f7faff;
+  gap: 40px;
 }
 
 .hero-content {
-  flex: 1 1 400px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .hero-content h1 {
-  font-size: 48px;
+  font-size: 65px;
   line-height: 1.2;
   margin-bottom: 20px;
+  font-family: "Noto Serif", serif;
 }
 
 .hero-content .bold {
@@ -95,21 +119,26 @@
 }
 
 .hero-content p {
-  font-size: 16px;
+  font-size: 22px;
   color: #555;
   max-width: 500px;
   line-height: 1.6;
+  font-family:  "Inter", sans-serif;
 }
 
 .hero-image {
-  flex: 1 1 400px;
-  text-align: center;
+  flex: 1;
+  display: flex;
+  align-items: center;  /* vertical centering of the image */
+  justify-content: center;
+  max-width: 500px;
 }
 
 .hero-image img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 /*  */
@@ -121,7 +150,7 @@
 }
 
 .plants h2 {
-  font-size: 32px;
+  font-size: 50px;
   margin-bottom: 10px;
 }
 
@@ -131,10 +160,11 @@
 
 .plants .subtitle {
   color: #555;
-  max-width: 600px;
+  max-width: 888px;
   margin: 0 auto 40px;
-  font-size: 16px;
+  font-size: 22px;
   line-height: 1.6;
+  font-family: "Inter", sans-serif;
 }
 
 .plant-grid {
@@ -156,13 +186,16 @@
 }
 
 .plant-card h3 {
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: medium;
+  font-family: "Inter", sans-serif;
   margin-bottom: 5px;
 }
 
 .plant-card .price {
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 22px;
+  font-family: "Inter", sans-serif;
 }
 
 .plant-card button {
@@ -219,8 +252,9 @@
 }
 
 .content h2 {
-  font-size: 32px;
+  font-size: 50px;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .content ul {
@@ -228,6 +262,8 @@
   padding-left: 20px;
   color: #555;
   line-height: 1.6;
+  font-size: 22px;
+  font-family: "Inter", sans-serif;
 }
 
 /*  */
@@ -457,69 +493,89 @@
 }
 
 
-    /* Mobile responsiveness */
-    @media (max-width: 768px) {
-      .nav-links a:not(.cart) {
+ /* 🔸 Small Devices (Phones) - up to 576px */
+@media screen and (max-width: 576px) {
+     .nav-links a:not(.cart) {
         display: none; /* hide all menu items except cart */
       }
-/*  */
-       .hero {
+  /* Hero */
+  .hero {
     flex-direction: column-reverse;
     text-align: center;
-    padding: 30px 20px;
+    padding: 30px 16px;
+  }
+
+  .hero-content {
+    align-items: center;
   }
 
   .hero-content h1 {
-    font-size: 36px;
+    font-size: 28px;
   }
 
   .hero-content p {
+    font-size: 14px;
+    text-align: center;
+    max-width: 100%;
     margin: 0 auto;
   }
 
-  /*  */
-   .plants-lover {
-    flex-direction: column;
-    text-align: left;
+  .hero-image {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  /* Plants */
+  .plants {
+    padding: 30px 16px;
+  }
+
+  .plants h2 {
+    font-size: 26px;
+  }
+
+  .plants .subtitle {
+    font-size: 14px;
+  }
+
+  .plant-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
+  .plant-card h3 {
+    font-size: 16px;
+  }
+
+  .plant-card button {
+    padding: 8px;
+    font-size: 14px;
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Plants Lover */
+  .plants-lover {
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 16px;
+  }
+
   .trusted-badge {
-    display: none; /* Hide badge on mobile */
+    display: none;
   }
 
-    }
-
-    /*  */
-    @media (max-width: 1024px) {
-  .plant-grid {
-    grid-template-columns: repeat(2, 1fr);
+  /* Deals */
+  .latest-deals {
+    padding: 40px 16px;
   }
-}
 
-@media (max-width: 992px) {
+  .latest-deals h2 {
+    font-size: 22px;
+  }
+
   .deals-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .deal-left {
-    flex-direction: row;
-    gap: 10px;
-  }
-
-  .deal-card.large {
-    height: 250px;
-  }
-
-  .deal-card.small {
-    flex: 1;
-    height: 150px;
-  }
-}
-
-@media (max-width: 768px) {
-  .deals-grid {
-    display: flex;
     flex-direction: column;
     gap: 20px;
   }
@@ -530,28 +586,26 @@
   }
 
   .deal-card {
-    height: 200px;
+    height: 180px;
   }
 
-  .deal-text h3, .deal-text h2 {
-    font-size: 18px;
+  .deal-text h3,
+  .deal-text h2 {
+    font-size: 16px;
   }
 
   .deal-text a {
     padding: 6px 12px;
     font-size: 13px;
   }
-}
 
-/* footer */
-/* Responsive */
-@media (max-width: 768px) {
+  /* Join */
   .join-section {
-    padding: 60px 15px;
+    padding: 60px 16px;
   }
 
   .join-section h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .subscribe-form {
@@ -562,7 +616,12 @@
   .subscribe-form input,
   .subscribe-form button {
     width: 100%;
-    max-width: 100%;
+    font-size: 14px;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 40px 20px;
   }
 
   .footer-content {
@@ -589,5 +648,125 @@
   .footer-socials a img {
     width: 24px;
     height: 24px;
+  }
+}
+
+/* 🔸 Medium Devices (Tablets) - 576px to 992px */
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  /* Hero */
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 60px 40px;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  /* Plants */
+  .plants {
+    padding: 40px 40px;
+  }
+
+  .plants h2 {
+    font-size: 34px;
+  }
+
+  .plants .subtitle {
+    font-size: 18px;
+  }
+
+  .plant-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .plant-card button {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  /* Plants Lover */
+  .plants-lover {
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 40px;
+  }
+
+  .trusted-badge {
+    display: none;
+  }
+
+  /* Deals */
+  .latest-deals {
+    padding: 50px 40px;
+  }
+
+  .deals-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .deal-left {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .deal-card.large {
+    height: 250px;
+  }
+
+  .deal-card.small {
+    flex: 1;
+    height: 150px;
+  }
+
+  /* Join */
+  .join-section {
+    padding: 80px 40px;
+  }
+
+  .join-section h2 {
+    font-size: 2rem;
+  }
+
+  .subscribe-form input,
+  .subscribe-form button {
+    width: 100%;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 50px 40px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
   }
 }
